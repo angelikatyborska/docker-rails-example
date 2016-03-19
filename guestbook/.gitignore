@@ -8,6 +8,7 @@
 /.bundle
 
 # Ignore all logfiles and tempfiles.
-/guestbook/log/*
-!/guestbook/log/.keep
-/guestbook/tmp
+log/*
+!log/.keep
+tmp
+config/database.yml
