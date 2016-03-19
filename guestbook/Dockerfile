@@ -10,4 +10,4 @@ ENV PATH $BUNDLE_BIN:$PATH
 
 WORKDIR /guestbook
 
-CMD bin/rails s
+CMD rm -f tmp/pids/* && bin/rails s -p 3000 -b '0.0.0.0'

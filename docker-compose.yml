@@ -1,0 +1,14 @@
+version: "2"
+
+services:
+  postgres:
+    image: postgres:9.5
+
+  guestbook:
+    build: ./guestbook
+    volumes:
+      - ./guestbook:/guestbook
+    links:
+      - postgres
+    ports:
+      - 3000:3000
