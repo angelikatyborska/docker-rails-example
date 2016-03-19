@@ -1,8 +1,13 @@
 version: "2"
 
+volumes:
+  postgres_data:
+
 services:
   postgres:
     image: postgres:9.5
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
 
   guestbook:
     build: ./guestbook
